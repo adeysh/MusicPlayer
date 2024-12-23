@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src='https://kit.fontawesome.com/98cfcb559a.js' crossorigin='anonymous'></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <img src="assets/blue_by_young_kai.jpeg">
+        <audio controls id="song">
+            <source src="assets/yung kai - blue (Official Audio).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <input type="range" name="range" id="range" min="0" value="0">
+
+        <div class="controls">
+            <div>
+                <i class="fa-solid fa-backward-step"></i>
+            </div>
+            <div onclick="pauseSong()">
+                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+            </div>
+            <div>
+                <i class=" fa-solid fa-forward-step"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
