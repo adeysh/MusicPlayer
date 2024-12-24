@@ -9,8 +9,6 @@ song.onloadedmetadata = function () {
     range.value = song.currentTime;
 };
 
-console.log(song.duration);
-
 function pauseSong() {
 
     if (ctrlIcon.classList.contains("fa-pause")) {
@@ -29,7 +27,6 @@ if (song.play()) {
         range.value = song.currentTime;
         seekUpdate();
     }, 500);
-    console.log(song);
 }
 
 function seekUpdate() {
