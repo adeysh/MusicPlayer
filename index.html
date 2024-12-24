@@ -22,12 +22,19 @@
             </div>
         </nav>
         <img src="assets/blue_by_young_kai.jpeg">
-        <audio controls id="song">
+
+        <h2>blue</h2>
+        <p>Young Kai</p>
+        <audio id="song">
             <source src="assets/yung kai - blue (Official Audio).mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 
-        <input type="range" name="range" id="range" min="0" value="0">
+        <div class="songSlider">
+            <div id="songInitialTime">0:00</div>
+            <input type="range" name="range" id="range" min="0" value="0">
+            <div id="songFinalTime">3:34</div>
+        </div>
 
         <div class="controls">
             <div>

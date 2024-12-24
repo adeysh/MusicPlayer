@@ -15,7 +15,7 @@ body {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #353839;
+    background-color: #424242;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -30,6 +30,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 1px 1px 40px 10px rgba(1, 1, 1, 0.3);
 }
 
 nav {
@@ -54,15 +57,33 @@ nav div {
     box-shadow: 1px 5px 20px 5px rgba(1, 1, 1, 0.2);
 }
 
+nav div:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
 nav div i {
     font-size: 20px;
     color: var(--secondary);
+}
+
+h2,
+p {
+    color: var(--primary);
 }
 
 img {
     width: 200px;
     height: 200px;
     margin: 20px;
+    box-shadow: 1px 8px 20px 10px rgba(1, 1, 1, 0.2);
+    transition: 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.03);
+    transition: 0.5s ease-in-out;
+    box-shadow: none;
 }
 
 .controls {
@@ -71,6 +92,7 @@ img {
     justify-content: space-around;
     width: 100%;
     height: 100px;
+    margin-top: 20px;
 }
 
 .controls div {
@@ -85,15 +107,43 @@ img {
     box-shadow: 1px 5px 20px 5px rgba(1, 1, 1, 0.2);
 }
 
+.controls div:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
 .controls div i {
     color: var(--secondary);
 }
+
 
 .controls div:nth-child(2) {
     font-size: 25px;
     width: 50px;
     height: 50px;
     padding: 30px;
+}
+
+.songSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+#songInitialTime {
+    position: absolute;
+    left: 40px;
+    bottom: -12px;
+    color: var(--primary);
+}
+
+#songFinalTime {
+    position: absolute;
+    right: 40px;
+    bottom: -12px;
+    color: var(--primary);
 }
 
 input {
@@ -115,6 +165,13 @@ input[type=range]::-webkit-slider-runnable-track {
     appearance: none;
     box-shadow: 1px 5px 20px 3px rgba(1, 1, 1, 0.2);
     border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track:hover {
+    box-shadow: none;
+    transform: scale(1.03);
+    transition: 0.5s ease-in-out;
 }
 
 input[type=range]::-webkit-slider-thumb {
